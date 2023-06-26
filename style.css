@@ -1,0 +1,204 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+
+body {
+    height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: hsl(235, 21%, 11%);
+    color: hsl(234, 39%, 85%);
+    position: relative;
+
+}
+
+/* Navbar */
+.nav {
+    background-image: url(bg-desktop-dark.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 33vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 600px;
+}
+
+.title h1 {
+    color: white;
+    letter-spacing: 1rem;
+    font-size: 2rem;
+}
+
+.input-todo {
+    background-color: hsl(235, 24%, 19%);
+    width: 600px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 35px;
+}
+
+.task-container {
+    border-radius: 10px;
+    position: absolute;
+    top: 30%;
+    left: 33.7%;
+    background-color: hsl(235, 24%, 19%);
+    height: auto;
+    width: 600px;
+}
+
+input {
+    width: 100%;
+    height: 100%;
+    background-color: hsl(235, 24%, 19%);
+    color: white;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 20px;
+}
+
+ul {
+    list-style-position: inside;
+    padding: 0;
+}
+
+li {
+    height: 50px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 40px;
+    background-image: url('download.svg');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 20px;
+    border-bottom: 1px solid rgba(248, 244, 244, 0.5);
+}
+
+.cross-icon {
+    padding-right: 20px;
+}
+
+li:hover {
+    background-image: url('check-mark-svgrepo-com.svg')
+}
+
+
+
+/* Footer */
+.footer {
+    color: hsl(233, 14%, 35%);
+    height: 50px;
+    font-size: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.footer p:hover {
+    color: hsl(234, 39%, 85%) !important;
+    font-size: bolder;
+}
+
+
+.filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* Finished/Active classes for tasks */
+
+.finished {
+    text-decoration: line-through;
+    background-image: url('check-mark-svgrepo-com.svg')
+}
+
+.all {
+    color: hsl(220, 98%, 61%);
+}
+
+.cross-icon:hover {
+    filter: brightness(0) invert(1);
+    font-weight: bold;
+    cursor: pointer;
+}
